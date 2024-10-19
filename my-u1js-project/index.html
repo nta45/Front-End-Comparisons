@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>u1js Counter</title>
+  <script src="https://cdn.jsdelivr.net/gh/uinl/u1js/u1.min.js"></script>
+</head>
+<body>
+
+  <div class="counter-container">
+    <!-- The counter and buttons will be dynamically generated here -->
+  </div>
+
+
+  <script>
+    let count = 0;
+
+    // Initial display when the page loads
+    app.start(() => {
+      app.display({
+        value: [
+          { id: 'counter', v: count.toString() }, // Display the counter
+          { tag: 'button', class: 'btn', id: 'decrement' }, // Decrement button
+          { tag: 'button', class: 'btn', id: 'reset' }, // Reset button
+          { tag: 'button', class: 'btn', id: 'increment' }, // Increment button
+          { tag: 'p', class: 'footer-text', v: 'This is u1js - nta45' } // Footer text
+        ]
+      });
+    });
+
+    // Queue of events to handle the counter actions
+    app.event({ u: 'increment', v: true }, () => {
+      app.display({
+        Q: [
+          { U: 'counter', v: (++count).toString() } // Increment and update counter
+        ]
+      });
+    });
+
+    app.event({ u: 'decrement', v: true }, () => {
+      app.display({
+        Q: [
+          { U: 'counter', v: (--count).toString() } // Decrement and update counter
+        ]
+      });
+    });
+
+    app.event({ u: 'reset', v: true }, () => {
+      count = 0;
+      app.display({
+        Q: [
+          { U: 'counter', v: count.toString() } // Reset counter and update display
+        ]
+      });
+    });
+  </script>
+
+</body>
+</html>

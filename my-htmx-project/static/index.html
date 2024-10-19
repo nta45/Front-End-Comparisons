@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMX Counter</title>
+  <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282c34;
+      font-family: Arial, sans-serif;
+      color: #61dafb;
+    }
+    .container {
+      text-align: center;
+      background: #20232a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #61dafb;
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #61dafb;
+      color: #20232a;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #21a1f1;
+    }
+    p {
+      font-family: sans-serif;
+      color: #61dafb;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://images.prismic.io/jamesauble-com-blog/bbf8ab03-2412-4355-a328-5983ddafdb54_htmx-logo.jpg?auto=compress,format&rect=0,0,1048,460&w=3840&h=1685" alt="HTMX Logo" class="logo">
+    <h1>Count: <span id="count" hx-get="/increment" hx-trigger="load" hx-swap="outerHTML">0</span></h1>
+    <button hx-get="/decrement" hx-target="#count" hx-swap="outerHTML">Decrement</button>
+    <button hx-get="/reset" hx-target="#count" hx-swap="outerHTML">Reset</button>
+    <button hx-get="/increment" hx-target="#count" hx-swap="outerHTML">Increment</button>
+    <p>This is an HTMX (+Python/Flask Server) - nta45</p>
+  </div>
+</body>
+</html>
