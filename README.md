@@ -3,9 +3,7 @@
 # Front-End-Comparisons
 Long-form repository for comparison between front-end web technologies, as part of a Caldwell University CS499 Independent Study &amp; STEMAdvance Research.
 
-<button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='fec-site/index.html';">
-  Take Me to Comparison Site
-</button>
+[![Take Me to Comparison Site](https://img.shields.io/badge/Take%20Me%20to%20Comparison%20Site-4CAF50?style=for-the-badge&logo=github)](fec-site/index.html)
 
 
 ## Table of Contents
