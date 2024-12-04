@@ -1,7 +1,11 @@
-<meta http-equiv="refresh" content="0; url=fec-site/index.html">
+<!-- <meta http-equiv="refresh" content="0; url=fec-site/index.html"> -->
 
 # Front-End-Comparisons
 Long-form repository for comparison between front-end web technologies, as part of a Caldwell University CS499 Independent Study &amp; STEMAdvance Research.
+
+<button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='fec-site/index.html';">
+  Take Me to Comparison Site
+</button>
 
 
 ## Table of Contents
