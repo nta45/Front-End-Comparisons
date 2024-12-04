@@ -1,0 +1,216 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Front-End Frameworks Comparison</title>
+    <!-- Include Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Include Prism.js for Syntax Highlighting (Optional if using embeds) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <!-- Include Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Include Custom JavaScript -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    </head>
+  <body>
+  
+    <!-- Header -->
+    <header>
+      <h1>Interactive Front-End Frameworks Comparison</h1>
+    </header>
+  
+    <!-- Main Container -->
+    <div class="main-container">
+  
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="filter-section">
+          <h2>Select Frameworks to Compare:</h2>
+          <div class="framework-list">
+            <div class="framework-item">
+              <input type="checkbox" id="react" name="framework" value="React">
+              <label for="react">React</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="vue" name="framework" value="Vue">
+              <label for="vue">Vue</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="angular" name="framework" value="Angular">
+              <label for="angular">Angular</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="svelte" name="framework" value="Svelte">
+              <label for="svelte">Svelte</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="lit" name="framework" value="Lit">
+              <label for="lit">Lit</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="vanjs" name="framework" value="VanJS">
+              <label for="vanjs">VanJS</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="webcomponents" name="framework" value="Web Components">
+              <label for="webcomponents">Web Components</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="htmx" name="framework" value="HTMX">
+              <label for="htmx">HTMX</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="uinl" name="framework" value="UINL">
+              <label for="uinl">UINL</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="solid" name="framework" value="Solid">
+              <label for="solid">Solid</label>
+            </div>
+            <div class="framework-item">
+              <input type="checkbox" id="tc39" name="framework" value="TC39">
+              <label for="tc39">TC39</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="filter-section">
+          <h2>Choose Comparison Criteria:</h2>
+          <div class="criteria-list">
+            <div class="criteria-item">
+              <input type="checkbox" id="compilation" name="criteria" value="Compilation Required" checked>
+              <label for="compilation">Compilation Required</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="loc" name="criteria" value="Lines of Code (LOC)" checked>
+              <label for="loc">Lines of Code (LOC)</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="complexity" name="criteria" value="Code Complexity" checked>
+              <label for="complexity">Code Complexity</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="modularity" name="criteria" value="Modularity" checked>
+              <label for="modularity">Modularity</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="rendering" name="criteria" value="SSR vs CSR" checked>
+              <label for="rendering">SSR vs CSR</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="performance" name="criteria" value="Runtime Performance" checked>
+              <label for="performance">Runtime Performance</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="popularity" name="criteria" value="Popularity" checked>
+              <label for="popularity">Popularity</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="ease" name="criteria" value="Ease of Use" checked>
+              <label for="ease">Ease of Use</label>
+            </div>
+            <div class="criteria-item">
+              <input type="checkbox" id="future" name="criteria" value="Future-Proofing" checked>
+              <label for="future">Future-Proofing</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="filter-section">
+          <h2>Custom Weighting:</h2>
+          <div class="weighting-slider">
+            <label for="performance-weight">Runtime Performance:</label>
+            <input type="range" id="performance-weight" name="performance-weight" min="1" max="5" value="3">
+          </div>
+          <div class="weighting-slider">
+            <label for="ease-weight">Ease of Use:</label>
+            <input type="range" id="ease-weight" name="ease-weight" min="1" max="5" value="3">
+          </div>
+          <div class="weighting-slider">
+            <label for="future-weight">Future-Proofing:</label>
+            <input type="range" id="future-weight" name="future-weight" min="1" max="5" value="3">
+          </div>
+        </div>
+      </aside>
+  
+      <!-- Main Content Area -->
+      <main class="tabs">
+        <!-- Tabs Navigation -->
+        <div class="tab-buttons">
+          <button class="tab-button active" data-tab="table">Comparison Table</button>
+          <button class="tab-button" data-tab="charts">Dynamic Charts</button>
+          <button class="tab-button" data-tab="code">Code Snippets</button>
+          <button class="tab-button" data-tab="dashboard">Interactive Dashboard</button>
+        </div>
+  
+        <!-- Tabs Content -->
+        <div class="tab-content active" id="table">
+          <table id="comparison-table">
+            <thead>
+              <tr>
+                <th>Framework</th>
+                <th>Compilation Required</th>
+                <th>Lines of Code (LOC)</th>
+                <th>Code Complexity</th>
+                <th>Modularity</th>
+                <th>SSR vs CSR</th>
+                <th>Runtime Performance (ms)</th>
+                <th>Popularity (NPM Downloads)</th>
+                <th>Ease of Use</th>
+                <th>Future-Proofing</th>
+                <th>Weighted Score</th> <!-- Included directly in HTML -->
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamic Rows Go Here -->
+            </tbody>
+          </table>
+          <div class="no-selection" id="no-selection-message">Select frameworks to compare.</div>
+        </div>
+  
+        <div class="tab-content" id="charts">
+          <div class="chart-container">
+            <h2>Runtime Performance</h2>
+            <canvas id="performanceChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+  
+        <div class="tab-content" id="code">
+          <div class="code-snippets">
+            <h2>Counter Component Code Snippets</h2>
+            <div class="snippet-container" id="code-snippets-container">
+              <!-- Dynamic Code Snippets Go Here -->
+              <div class="no-selection">Select frameworks to view code snippets.</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="tab-content" id="dashboard">
+          <div class="dashboard-container">
+            <h2>Interactive Dashboard</h2>
+            <div class="chart-container">
+              <canvas id="radarChart" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+  
+      </main>
+  
+    </div>
+  
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Front-End Frameworks Comparison. All rights reserved.</p>
+      <div class="feedback-section">
+        <h3>We Value Your Feedback!</h3>
+        <form id="feedback-form">
+          <label for="feedback">Your Feedback:</label><br>
+          <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+  
