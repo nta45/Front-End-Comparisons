@@ -159,6 +159,15 @@
     margin-bottom: 40px;
   }
 
+  #radarChart,
+#performanceChart {
+  max-width: 600px; /* Adjust as needed */
+  max-height: 600px; /* Adjust as needed */
+  min-width: 600px; /* Adjust as needed */
+  min-height: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center the chart */
+}
+
   /* Code Snippets Section */
   .code-snippets {
     width: 100%;
@@ -172,13 +181,13 @@
   }
 
   .snippet-container {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .code-snippet {
-    width: 48%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -249,6 +258,12 @@
   #feedback-form button:hover {
     background-color: #45a049;
   }
+
+  /* Highlighting the Weighted Score column */
+.highlight {
+  background-color: #ffeeba; /* Light yellow background */
+  font-weight: bold;
+}
 
   /* Responsive Design */
   @media (max-width: 768px) {

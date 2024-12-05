@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="index.css">
     <!-- Include Custom JavaScript -->
     <script src="index.js" defer></script>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
   </head>
   <body>
     </head>
@@ -29,6 +36,10 @@
         <div class="filter-section">
           <h2>Select Frameworks to Compare:</h2>
           <div class="framework-list">
+            <div class="select-buttons">
+              <button id="select-all">Select All</button>
+              <button id="deselect-all">Deselect All</button>
+            </div>
             <div class="framework-item">
               <input type="checkbox" id="react" name="framework" value="React">
               <label for="react">React</label>
@@ -68,10 +79,6 @@
             <div class="framework-item">
               <input type="checkbox" id="solid" name="framework" value="Solid">
               <label for="solid">Solid</label>
-            </div>
-            <div class="framework-item">
-              <input type="checkbox" id="tc39" name="framework" value="TC39">
-              <label for="tc39">TC39</label>
             </div>
           </div>
         </div>
@@ -118,20 +125,9 @@
           </div>
         </div>
   
-        <div class="filter-section">
-          <h2>Custom Weighting:</h2>
-          <div class="weighting-slider">
-            <label for="performance-weight">Runtime Performance:</label>
-            <input type="range" id="performance-weight" name="performance-weight" min="1" max="5" value="3">
-          </div>
-          <div class="weighting-slider">
-            <label for="ease-weight">Ease of Use:</label>
-            <input type="range" id="ease-weight" name="ease-weight" min="1" max="5" value="3">
-          </div>
-          <div class="weighting-slider">
-            <label for="future-weight">Future-Proofing:</label>
-            <input type="range" id="future-weight" name="future-weight" min="1" max="5" value="3">
-          </div>
+        <div class="weighting-section">
+          <h3>Custom Weighting</h3>
+          <div id="criteria-weighting"></div>
         </div>
       </aside>
   
@@ -140,7 +136,6 @@
         <!-- Tabs Navigation -->
         <div class="tab-buttons">
           <button class="tab-button active" data-tab="table">Comparison Table</button>
-          <button class="tab-button" data-tab="charts">Dynamic Charts</button>
           <button class="tab-button" data-tab="code">Code Snippets</button>
           <button class="tab-button" data-tab="dashboard">Interactive Dashboard</button>
         </div>
@@ -151,31 +146,18 @@
             <thead>
               <tr>
                 <th>Framework</th>
-                <th>Compilation Required</th>
-                <th>Lines of Code (LOC)</th>
-                <th>Code Complexity</th>
-                <th>Modularity</th>
-                <th>SSR vs CSR</th>
-                <th>Runtime Performance (ms)</th>
-                <th>Popularity (NPM Downloads)</th>
-                <th>Ease of Use</th>
-                <th>Future-Proofing</th>
-                <th>Weighted Score</th> <!-- Included directly in HTML -->
+                <!-- Add headers dynamically for selected criteria -->
+                <th>Weighted Score</th>
               </tr>
             </thead>
             <tbody>
-              <!-- Dynamic Rows Go Here -->
+              <!-- Rows will be populated dynamically -->
             </tbody>
           </table>
-          <div class="no-selection" id="no-selection-message">Select frameworks to compare.</div>
+          <div id="no-selection-message" style="display: none;">No frameworks selected. Please select at least one framework to view the comparison.</div>
+          <div id="custom-recommendation" class="recommendation-message"></div>
         </div>
-  
-        <div class="tab-content" id="charts">
-          <div class="chart-container">
-            <h2>Runtime Performance</h2>
-            <canvas id="performanceChart" width="400" height="200"></canvas>
-          </div>
-        </div>
+
   
         <div class="tab-content" id="code">
           <div class="code-snippets">
@@ -202,14 +184,9 @@
   
     <!-- Footer -->
     <footer>
-      <p>&copy; 2024 Front-End Frameworks Comparison. All rights reserved.</p>
+      <p>&copy; 2024 Nathan Ayele. All rights reserved.</p>
+      <p>Disclaimer: This site is for educational purposes only. The information provided is based on publicly available data and may not be up-to-date or accurate.</p>
       <div class="feedback-section">
-        <h3>We Value Your Feedback!</h3>
-        <form id="feedback-form">
-          <label for="feedback">Your Feedback:</label><br>
-          <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
-          <button type="submit">Submit</button>
-        </form>
       </div>
     </footer>
   </body>
