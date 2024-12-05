@@ -53,8 +53,7 @@ const frameworksData = {
     "Runtime Performance": 115, // Updated performance metric
     "Popularity": 1600000, // Increased NPM downloads
     "Ease of Use": 6,
-    "Future-Proofing": 9,
-    "NathanScore": 0 // To be added manually
+    "Future-Proofing": 9
   },
   "Vue": {
     "Compilation Required": "Yes (Vue CLI, Vite)",
@@ -65,8 +64,7 @@ const frameworksData = {
     "Runtime Performance": 105, // Updated
     "Popularity": 1100000, // Updated
     "Ease of Use": 8,
-    "Future-Proofing": 9,
-    "NathanScore": 0 // To be added manually
+    "Future-Proofing": 9
   },
   "Angular": {
     "Compilation Required": "Yes (Angular CLI)",
@@ -78,7 +76,6 @@ const frameworksData = {
     "Popularity": 950000, // Updated
     "Ease of Use": 5,
     "Future-Proofing": 9,
-    "NathanScore": 0 // To be added manually
   },
   "Svelte": {
     "Compilation Required": "Yes (Svelte Compiler)",
@@ -90,7 +87,6 @@ const frameworksData = {
     "Popularity": 420000, // Updated
     "Ease of Use": 8,
     "Future-Proofing": 9,
-    "NathanScore": 0 // To be added manually
   },
   "Lit": {
     "Compilation Required": "Yes (Build Tools)",
@@ -102,7 +98,6 @@ const frameworksData = {
     "Popularity": 320000, // Updated
     "Ease of Use": 7,
     "Future-Proofing": 8,
-    "NathanScore": 0 // To be added manually
   },
   "VanJS": {
     "Compilation Required": "No",
@@ -114,7 +109,6 @@ const frameworksData = {
     "Popularity": 55000, // Updated
     "Ease of Use": 9,
     "Future-Proofing": 7,
-    "NathanScore": 0 // To be added manually
   },
   "Web Components": {
     "Compilation Required": "No",
@@ -126,7 +120,6 @@ const frameworksData = {
     "Popularity": 210000, // Updated
     "Ease of Use": 7,
     "Future-Proofing": 10,
-    "NathanScore": 0// To be added manually
   },
   "HTMX": {
     "Compilation Required": "No",
@@ -138,19 +131,17 @@ const frameworksData = {
     "Popularity": 110000, // Updated
     "Ease of Use": 9,
     "Future-Proofing": 8,
-    "NathanScore": 0 // To be added manually
   },
   "UINL": {
     "Compilation Required": "No",
-    "Lines of Code (LOC)": 150, // Updated
+    "Lines of Code (LOC)": 110, // Updated
     "Code Complexity": 4,
-    "Modularity": 6,
+    "Modularity": 8,
     "SSR vs CSR": "CSR",
     "Runtime Performance": 100, // Updated
-    "Popularity": 45000, // Updated
-    "Ease of Use": 7,
-    "Future-Proofing": 6,
-    "NathanScore": 0 // To be added manually
+    "Popularity": 10, // Updated
+    "Ease of Use": 8,
+    "Future-Proofing": 10,
   },
   "Solid": {
     "Compilation Required": "Yes (Vite)",
@@ -162,7 +153,6 @@ const frameworksData = {
     "Popularity": 380000, // Updated
     "Ease of Use": 8,
     "Future-Proofing": 9,
-    "NathanScore": 0 // To be added manually
   }
 };
 

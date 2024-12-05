@@ -3,10 +3,9 @@
 This is a long-form repository for research conducted by **Nathan Ayele**. The study compares various front-end web technologies as part of a Caldwell University CS499 Independent Study & STEM Advance Research.
 
 
-| For visual learners who don't like reading 🙋‍♀️➡️ | [<img src="https://img.shields.io/badge/Take%20Me%20to%20Comparison%20Site-4CAF50?style=for-the-badge&logo=github" width="175" height="20">](fec-site/index.html) |
+| For visual learners who don't like reading 🙋‍♀️➡️ | [<img src="https://img.shields.io/badge/Take%20Me%20to%20Interactive%20Site-4CAF50?style=for-the-badge&logo=github" width="175" height="20">](fec-site/index.html) | [GitHub Repo](https://github.com/nta45/Front-End-Comparisons)
 
 ## Quick Access
-
 - [1-Minute Summary](#1-minute-summary)
 - [5-Minute Summary](#5-minute-summary)
 - [Full Analysis](#full-analysis)
@@ -667,7 +666,7 @@ UINL (User Interface Notation Language) is an experimental language aiming to si
 
 - **Popularity**: Experimental; very limited use.
 - **Ease of Use**: Potentially easy due to simplicity.
-- **Future-Proofing**: Uncertain due to limited adoption.
+- **Future-Proofing**: Uncertain due to limited adoption, but highly likely to grow because of AI revolution.
 
 **Code Example**
 
@@ -765,5 +764,3 @@ For any questions or inquiries, please contact Nathan Ayele: nayele at caldwell 
 - [Full Analysis](#full-analysis)
 
 ---
-
-*End of Document*
